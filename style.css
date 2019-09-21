@@ -24,7 +24,7 @@ body {
 
 
     .nav-list a:hover {
-     background: rgb(220, 212, 255);
+     background: #B5E4E6;
     }
     
     li {
@@ -44,6 +44,7 @@ body {
         height: 100vh;
         background-color: #92FFF5;
         text-align: center;
+        color: black;
     }
     
     #projects {

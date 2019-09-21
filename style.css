@@ -1,0 +1,51 @@
+body {
+    margin: 0px; 
+    }
+    
+    #navbar {
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        background-color: rgba(158, 146, 238, 1); 
+        width: 100%; 
+        box-shadow: 0 2px 0 rgba (0, 0, 0, 0.4);
+    }
+    
+    .nav-list {
+        width: 300px;
+        display: flex;
+        margin-right: 20px;
+    }
+    .nav-list a{
+        display: block;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+
+    .nav-list a:hover {
+     background: rgb(220, 212, 255);
+    }
+    
+    li {
+        display: flex;
+        list-style: none;
+        color: black;
+        font-size: 2rem;
+    
+    }
+    
+    a {
+        color: black;
+    }
+    
+    #welcome-section {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(217, 200, 255, 0.63);
+        text-align: center;
+    }
+    
+    .projects-grid {
+        display: grid;
+    }

@@ -126,13 +126,15 @@
     }
 
     h3 {
-        font-family: fantasy;
         font-size: 50px;
     }
 
     p, h1, h2, li, {
         text-align: center;
-        font-family: fantasy;
+    }
+
+    p {
+        text-align: center;
     }
 
     @media (max-width: 75em) {

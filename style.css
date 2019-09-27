@@ -8,19 +8,22 @@
         position: fixed;
         background-color: #02806F; 
         width: 100%; 
-        height: 60px;
+        height: 50px;
         box-shadow: 0 2px 0 rgba (0, 0, 0, 0.4);
+        font-size: 25px;
+        padding: 20px;
     }
     
     #navlist {
         width: 300px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin-right: 50px;
     }
     
     .navlist a{
         display: block;
-        font-size: 2rem;
+        font-size: 5rem;
         padding: 1rem;
     }
 
@@ -45,8 +48,12 @@
         width: 100%;
         height: 100vh;
         background-color: #92FFF5;
+    }
 
-        
+    #intro {
+        text-align: center;
+        color: rgb(1, 39, 34); 
+        padding: 200px;
     }
     
     #projects {
@@ -54,20 +61,22 @@
         width: 100%;
         height: 100vh; 
         margin-right: 60px;
+        padding: 75px;
     }
 
     .projects-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax (320 px, 1fr));
-        grid-gap: 4rem;
+        grid-gap: 40rem;
     }
 
     #contact {
         width: 100%;
         height: 100vh;
         background-color: #ADFFF7;
-        font-size: 2rem;
+        font-size: 1rem;
         margin-right: 60px;
+        padding: 50px;
     }
 
     .profile-link a:hover {
@@ -110,8 +119,15 @@
         display: flex;
     }
 
-    p {
+    h1 {
+        display: block;
+        font-size: 7rem;
+
+    }
+
+    p, h1, h2, li {
         text-align: center;
+        font-family: fantasy
     }
 
     @media (max-width: 75em) {

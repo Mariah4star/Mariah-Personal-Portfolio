@@ -66,10 +66,9 @@
     }
 
     .projects-grid {
-        padding: 30px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax (320 px, 1fr));
-        grid-gap: 40rem;
+        grid-gap: 70rem;
         width: 100%;
         height: 50px;
     }
@@ -94,9 +93,8 @@
     }
 
     #Swimmer {
-        width: 100px;
-        height: 100px;
-        display: flex;
+        width: 200px;
+        height: 150px;
     }
 
     #footer {

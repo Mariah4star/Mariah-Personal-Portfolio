@@ -87,9 +87,15 @@
     }
 
     #Swimmer {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
+
+    #Yoda {
+        height: 200px;
+        width: 300px;
+    }
+
     #interest {
         width: 200px;
         height: 150px;

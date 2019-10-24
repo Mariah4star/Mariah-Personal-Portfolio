@@ -134,7 +134,7 @@ console.log(otherCharacters)
 
     name.textContent = planet.name
     population.textContent = planet.population
-    pic.src = 
+    pic.src = `https://starwars-visualguide.com/#/planets?page=1`
 
     planetDiv.appendChild(name)
     planetDiv.appendChild(population)

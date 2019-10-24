@@ -41,16 +41,35 @@ header {
   padding-bottom: 20px;
 }
 
+#Planets {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  background-image: url("/assets/star-wars-star-background-4.jpg");
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 2rem;
   max-width: 1280px;
   margin: 0px;
-  grid-template-columns: auto auto;
   background-image: url("/assets/star-wars-star-background-4.jpg");
   padding: 50px;
   }
+
+  area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem;
+    max-width: 1280px;
+    margin: 0px;
+    background-image: url("/assets/star-wars-star-background-4.jpg");
+    padding: 20px;
+    }
 
   button {
     font-size: 1.5rem;
@@ -59,4 +78,26 @@ main {
     background-color: rgb(219, 219, 219);
     margin-left: 20px;
     margin-top: 20px;
+  }
+
+  .charDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .picDiv {
+    width: 160px;
+  }
+
+  .planetDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .planetPic {
+    width: 160px;
   }

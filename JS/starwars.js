@@ -27,6 +27,9 @@ people.forEach((person) => {
     let gender = document.createElement('p')
     let pic = document.createElement('img')
 
+    pic.setAttribute('class', 'picDiv')
+    personDiv.setAttribute('class', 'charDiv')
+
    let charNum = getCharNumber(person.url)
 
     name.textContent = person.name
@@ -62,6 +65,7 @@ maleButton.addEventListener('click', () => {
  let matchedDiv = allDivs.find(oneDiv => {
     return oneDiv.firstChild.textContent === character.name
   })
+  
   matchedDiv.setAttribute("style", "display: none;" )
 
   otherCharacters.forEach(character => {
@@ -125,20 +129,35 @@ console.log(maleCharacters)
 console.log(femaleCharacters)
 console.log(otherCharacters)
 
+let areaArea = document.querySelector('area')
 
-/*planets.forEach(function(planet) {
-    let planetDiv = document.createElement('div')
-    let name = document.createElement('h1')
-    let population = document.createElement('p')
-    let pic = document.createElement('img')
+planets.forEach((planet) => {
+  let planetDiv = document.createElement('div')
+  let planetName = document.createElement('h3')
+  let planetPic =document.createElement('img')
 
-    name.textContent = planet.name
-    population.textContent = planet.population
-    pic.src = `https://starwars-visualguide.com/#/planets?page=1`
+  let planNumber = getPlanNumber(planet.url)
 
-    planetDiv.appendChild(name)
-    planetDiv.appendChild(population)
-    planetDiv.appendChild(pic)
+  planetName.textContent = planet.name
+  planetPic.src = `https://starwars-visualguide.com/assets/img/planets/${planNumber}.jpg`
+  
+planetPic.addEventListener('error', (event) => {
+  let badImage = event.target
+  badImage.src = '../Images/lego huh.jpeg'
+})
 
-    mainArea.appendChild(planetDiv)
-  }); */
+  planetDiv.appendChild(planetPic)
+  planetDiv.appendChild(planetName)
+
+  areaArea.appendChild(planetDiv)
+})
+
+function getPlanNumber(planURL) {
+  let end = planURL.lastIndexOf('/')
+  let planID = planURL.substring(end -2, end)
+  if (planID.indexOf('/') !== -1) {
+  return planID.slice(1,2)
+  } else {
+    return planID
+  }
+}

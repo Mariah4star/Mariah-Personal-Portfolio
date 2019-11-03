@@ -9,7 +9,7 @@ async function getPokeData(url) {
 }
 }
 
-const data = getPokeData('https://pokeapi.co/api/v2/pokemon')
+getPokeData('https://pokeapi.co/api/v2/pokemon')
  
 let mainArea = document.querySelector('main')
 

@@ -58,7 +58,6 @@ function populateDOM(single_pokemon) {
     pokeScene.appendChild(pokeCard)
 
     mainArea.appendChild(pokeScene)
-
 } 
 
 

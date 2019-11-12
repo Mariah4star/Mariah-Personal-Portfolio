@@ -36,7 +36,7 @@
         display: flex;
         list-style: none;
         color: black;
-        font-size: 2rem;
+        font-size: 3rem;
     
     }
     
@@ -45,25 +45,26 @@
     }
     
     #welcome-section {
-        height: 100vh;
+        height: 100%;
         background-color: #92FFF5;
     }
 
     #intro {
         text-align: center;
+        justify-content: center;
         color: rgb(1, 39, 34); 
         padding: 200px;
     }
     #projects {
-        background-color: #8BCCC5;
-        height: 100vh; 
+        background-color: #8BCCC5; 
         padding: 100px;
         font-size: 30px;
+        
     }
 
     .project-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
         grid-gap: 2rem;
         margin: 0 auto;
         padding-top: 50px;
@@ -86,22 +87,23 @@
     }
 
     #Sir {
-        width: 270px;
-        height: 200px;
+        width: 250px;
+        height: 150px;
     }
 
     #Poke {
-        width: 270px;
-        height: 200px;
+        width: 250px;
+        height: 150px;
     }
 
     #Yoda {
-        height: 200px;
-        width: 270px;
+        height: 150px;
+        width: 250px;
     }
 
     #interest {
-        height: 200px;
+        height: 150px;
+        width: 250px;
     }
 
     #caption {
@@ -109,7 +111,7 @@
     display: flex;
     justify-content: center;
     text-align: justify;
-    padding-left: 30px;
+    padding-right: 50px;
     }
 
     #footer {
@@ -119,7 +121,7 @@
 
     h1 {
         display: block;
-        font-size: 7rem;
+        font-size: 8rem;
 
     }
 
@@ -133,6 +135,7 @@
 
     p {
         text-align: center;
+        font-size: 2rem;
     }
 
     #github {

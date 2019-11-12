@@ -9,11 +9,53 @@ async function getAPIData(url) {
 }
 
 let allSenators = []
+let simpleSenators = []
+
+let republicans = []
+let democrats = []
 
 const theData = getAPIData('senators.json').then(data => {
  allSenators = data.results[0].members
- populateDOM(allSenators)
+ simpleSenators = makeSimpleMap(allSenators)
+republicans = filterSentators(simpleSenators, "R")
+democrats = filterSentators(simpleSenators, "D")
+console.log(totalVotes(simpleSenators))
+ populateDOM(simpleSenators)
 })
+//map here
+function makeSimpleMap(allOfThem) {
+    let results = allOfThem.map(senator => {
+        return {
+            id: senator.id,
+            name: `${senator.first_name} ${senator.last_name}`,
+            party: senator.party,
+            age: `${calculate_age(new Date(senator.date_of_birth))}`,
+            gender: senator.gender,
+            total_votes: senator.total_votes,
+        }
+    })
+    return results
+}
+//filter goes here
+function filterSentators(simpleList, partyAffilation) {
+    return simpleList.filter(senators => senators.party === partyAffilation)
+}
+
+//reduce
+const testArray = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 30]
+
+const testReduce = testArray.reduce((acc, num) => {
+    return acc + num
+}, 0)
+
+function totalVotes(senatorList) {
+    const results = senatorList.reduce((acc, senator) => {
+        return acc + senator.total_votes
+    }, 0)
+    return results
+}
+
+console.log(testReduce)
 
 const container = document.querySelector('.container')
 
@@ -55,19 +97,35 @@ function cardContent(senator) {
     figure.setAttribute('class', 'image is-48x48')
 
     let img = document.createElement('img')
-    img.src = ``
+    if(senator.party === "R") {
+        img.src = './images/lego huh.jpg'
+    }
+    if(senator.party === "D") {
+        img.src = './images/lego huh.jpg'
+    }
+    if(senator.party === "ID") {
+        img.src = './images/lego huh.jpg'
+    }
+    img.src = 'https://bulma.io/images/placeholders/96x96.png'
     img.alt = 'Placeholder image'
 
     let mediaContent = document.createElement('div')
     mediaContent.setAttribute('class', 'media-content')
 
     let titleP = document.createElement('p')
-    titleP.setAttribute('class', 'title is-4')
-    titleP.textContent = 'foo'
+    titleP.setAttribute('class', 'title is-5')
+    titleP.textContent = senator.name
     
     let subtitleP = document.createElement('p')
     subtitleP.setAttribute('class', 'subtitle is-6')
-    subtitleP.textContent = 'bar'
+    //subtitleP.textContent = `foo`
+
+    let contentDiv = document.createElement('div')
+    contentDiv.setAttribute('class', 'content')
+    contentDiv.textContent = "words"
+    let contentBreak = document.createElement('br')
+    let ageP = document.createElement('p')
+    ageP.textContent = senator.age
 
     mediaContent.appendChild(titleP)
     mediaContent.appendChild(subtitleP)
@@ -75,7 +133,19 @@ function cardContent(senator) {
     mediaLeft.appendChild(figure)
     media.appendChild(mediaLeft)
     media.appendChild(mediaContent)
+    contentDiv.appendChild(contentBreak)
+    contentDiv.appendChild(ageP)
     cardContent.appendChild(media)
+    cardContent.appendChild(contentDiv)
+
 
     return cardContent
+}
+
+function calculate_age(dob) {
+    let diff_ms = Date.now() - dob.getTime();
+    let age_dt = new Date(diff_ms);
+
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+
 }

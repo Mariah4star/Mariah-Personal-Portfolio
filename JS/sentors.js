@@ -68,7 +68,7 @@ senator_arr.forEach(senator => {
  cardImage.setAttribute('class', 'card-image')
 
  let figure = document.createElement('figure')
- figure.setAttribute('class', 'image is-4by3')
+ figure.setAttribute('class', 'image')
 
  let figureImage = document.createElement('img')
  figureImage.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}_200.jpg`

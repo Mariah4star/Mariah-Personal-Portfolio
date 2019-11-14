@@ -98,15 +98,15 @@ function cardContent(senator) {
 
     let img = document.createElement('img')
     if(senator.party === "R") {
-        img.src = 'Images/republican-image-new.jpg'
+        img.src = "Images/republican-image-new.jpg"
     }
     if(senator.party === "D") {
-        img.src = 'Images/domcrat.jpg'
+        img.src = "Images/domcrat.jpg"
     }
     if(senator.party === "ID") {
         img.src = 'Images/lego huh.jpg'
     }
-    img.src = 'https://bulma.io/images/placeholders/96x96.png'
+    img.src = "Images/flag.jpg"
     img.alt = 'Placeholder image'
 
     let mediaContent = document.createElement('div')

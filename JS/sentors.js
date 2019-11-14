@@ -101,10 +101,10 @@ function cardContent(senator) {
         img.src = 'Images/republican-image-new.jpg'
     }
     if(senator.party === "D") {
-        img.src = './Images/domcrat.jpg'
+        img.src = 'Images/domcrat.jpg'
     }
     if(senator.party === "ID") {
-        img.src = './Images/lego huh.jpg'
+        img.src = 'Images/lego huh.jpg'
     }
     img.src = 'https://bulma.io/images/placeholders/96x96.png'
     img.alt = 'Placeholder image'

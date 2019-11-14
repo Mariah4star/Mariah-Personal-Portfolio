@@ -10,18 +10,20 @@ async function getAPIData(url) {
 
 let allSenators = []
 let simpleSenators = []
-
 let republicans = []
 let democrats = []
+let independant = []
 
 const theData = getAPIData('senators.json').then(data => {
  allSenators = data.results[0].members
  simpleSenators = makeSimpleMap(allSenators)
 republicans = filterSentators(simpleSenators, "R")
 democrats = filterSentators(simpleSenators, "D")
+independant = filterSentators(simpleSenators, "ID")
 console.log(totalVotes(simpleSenators))
  populateDOM(simpleSenators)
 })
+
 //map here
 function makeSimpleMap(allOfThem) {
     let results = allOfThem.map(senator => {
@@ -38,7 +40,7 @@ function makeSimpleMap(allOfThem) {
 }
 //filter goes here
 function filterSentators(simpleList, partyAffilation) {
-    return simpleList.filter(senators => senators.party === partyAffilation)
+    return simpleList.filter(senators => senators.party === "partyAffilation")
 }
 
 //reduce
@@ -53,6 +55,18 @@ function totalVotes(senatorList) {
         return acc + senator.total_votes
     }, 0)
     return results
+}
+
+function oldestSenator(senatorList) {
+    const results = senatorList.reduce((oldest, senator) =>{
+        return (oldest.age || 0) > senator.age ? oldest : senator
+    }, {})
+}
+
+function sortSenatorByAge(senatorList) {
+    return senatorList.sort((a,b) => {
+        return a.age - b.age
+    })
 }
 
 console.log(testReduce)
@@ -134,6 +148,7 @@ function cardContent(senator) {
     mediaLeft.appendChild(figure)
     media.appendChild(mediaLeft)
     media.appendChild(mediaContent)
+    
     contentDiv.appendChild(contentBreak)
     contentDiv.appendChild(ageP)
     cardContent.appendChild(media)

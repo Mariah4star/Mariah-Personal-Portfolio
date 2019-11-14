@@ -106,6 +106,7 @@ function cardContent(senator) {
     if(senator.party === "ID") {
         img.src = 'Images/lego huh.jpg'
     }
+    
     img.src = "Images/flag.jpg"
     img.alt = 'Placeholder image'
 

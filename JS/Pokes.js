@@ -1,11 +1,12 @@
-class Pokemon {
-    constructor(id, name) {
-        this.id = id
-        this.name = name
+class Pokemon { 
+    constructor(pokemon_id, pokemon_name) {
+        this.id = pokemon_id
+        this.name = pokemon_name
     }
 }
 
-const Poke = new Pokemon(210, 'Poke')
+
+const Poke = new Pokemon(150, 'New Pokemon')
 
 const newButton = document.querySelector('#newcard')
 newButton.addEventListener('click', function() {

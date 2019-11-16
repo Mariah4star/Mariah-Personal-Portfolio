@@ -1,3 +1,18 @@
+class Pokemon {
+    constructor(id, name) {
+        this.id = id
+        this.name = name
+    }
+}
+
+const Poke = new Pokemon(1001, 'Poke')
+
+const newButton = document.querySelector('#newcard')
+newButton.addEventListener('click', function() {
+    populateDOM(Poke)
+    
+})
+
 async function getAPIData(url) {
     try{
         const response = await fetch(url)
@@ -44,7 +59,7 @@ function populateDOM(single_pokemon) {
 
    let pokeNum = getPokeNumber(single_pokemon.id)
 
-    name.textContent = `${single_pokemon.name} height: ${single_pokemon.height}`
+    name.textContent = `#${single_pokemon.id} ${single_pokemon.name[0].toUpperCase()}${(single_pokemon.name.slice(1))}`
     pic.src = `../Images/${pokeNum}.png`
     picture.src = "../Images/pokecardBack.png"
 
@@ -59,7 +74,6 @@ function populateDOM(single_pokemon) {
 
     mainArea.appendChild(pokeScene)
 } 
-
 
 
 function getPokeNumber(id) {

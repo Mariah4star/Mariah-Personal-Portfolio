@@ -5,7 +5,7 @@ class Pokemon {
     }
 }
 
-const Poke = new Pokemon(1001, 'Poke')
+const Poke = new Pokemon(210, 'Poke')
 
 const newButton = document.querySelector('#newcard')
 newButton.addEventListener('click', function() {

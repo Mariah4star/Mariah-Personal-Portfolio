@@ -60,7 +60,7 @@ function populateDOM(single_pokemon) {
    let pokeNum = getPokeNumber(single_pokemon.id)
 
     name.textContent = `#${single_pokemon.id} ${single_pokemon.name[0].toUpperCase()}${(single_pokemon.name.slice(1))}`
-    pic.src = `../Images/${pokeNum}.png`
+    pic.src = `../Images/images/${pokeNum}.png`
     picture.src = "../Images/pokecardBack.png"
 
     pokeFront.appendChild(pic)

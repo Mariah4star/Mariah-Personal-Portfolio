@@ -21,8 +21,6 @@ body {
   
 }
 
-
-
 .picDiv {
     width: 200px;
     height: 200px;
@@ -91,8 +89,6 @@ body {
     height: 250px;
     backface-visibility: hidden;
   }
-
-  
   
   h1 {
       font-size: 20px;

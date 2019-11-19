@@ -10,8 +10,15 @@ const Poke = new Pokemon(150, 'Mewtwo')
 
 const newButton = document.querySelector('#newcard')
 newButton.addEventListener('click', function () {
-    populateDOM(Poke)
-
+    let pokeID = prompt("Please enter a Pokemon ID")
+    if (pokeID > 0 && pokeID <= 807 ) {
+    getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeID}`)
+    .then(result => {
+        populateDOM(result)
+    })
+} else{
+    alert('As of yet not more pokemon above 807, try another one')
+}
 })
 
 async function getAPIData(url) {
@@ -24,7 +31,7 @@ async function getAPIData(url) {
     }
 }
 
-const theData = getAPIData('https://pokeapi.co/api/v2/pokemon')
+const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/?limit=30')
     .then(data => {
         for (const pokemon of data.results) {
             getAPIData(pokemon.url)
@@ -59,7 +66,7 @@ function populateDOM(single_pokemon) {
     let pokeNum = getPokeNumber(single_pokemon.id)
 
     name.textContent = `#${single_pokemon.id} ${single_pokemon.name[0].toUpperCase()}${(single_pokemon.name.slice(1))}`
-    pic.src = `../Images/images/${pokeNum}.png`
+    pic.src= `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png` 
     picture.src = "../Images/pokecardBack.png"
 
     pokeFront.appendChild(pic)

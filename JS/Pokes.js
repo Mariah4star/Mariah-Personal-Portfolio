@@ -5,8 +5,7 @@ class Pokemon {
     }
 }
 
-
-const Poke = new Pokemon(150, 'Mewtwo')
+//const Poke = new Pokemon(150, 'Mewtwo')
 
 const newButton = document.querySelector('#newcard')
 newButton.addEventListener('click', function () {
@@ -17,7 +16,7 @@ newButton.addEventListener('click', function () {
                 populateDOM(result)
             })
     } else {
-        alert('As of yet not more pokemon above 807, try another one')
+        alert('There are not  more than 807 pokemon, try one below')
     }
 })
 

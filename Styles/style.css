@@ -42,31 +42,27 @@
     a {
         color: black;
     }
-    
-    #welcome-section {
-        height: 100%;
-        background-color: #92FFF5;
-    }
 
-    #intro {
-        text-align: center;
-        justify-content: center;
-        color: rgb(1, 39, 34); 
-        padding: 200px;
+    #messing {
+        text-align: left;
+        justify-content: left;
+        color: rgb(0, 0, 0); 
+        padding-top: 100px;
+        padding-right: 50px;
     }
-    #projects {
-        background-color: #8BCCC5; 
-        padding: 100px;
-        font-size: 30px;
         
+    #projects {
+        display: flex;
+        background-color: #8BCCC5; 
+        padding: 50px;
     }
 
     .project-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
-        grid-gap: 2rem;
-        margin: 0 auto;
-        padding-top: 50px;
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1rem;
+        margin: 0px;
+        padding-top: 100px;
       }
 
     #contact {
@@ -90,21 +86,6 @@
         height: 150px;
     }
 
-    #Poke {
-        width: 250px;
-        height: 150px;
-    }
-
-    #Yoda {
-        height: 150px;
-        width: 250px;
-    }
-
-    #interest {
-        height: 150px;
-        width: 250px;
-    }
-
     #caption {
     font-size: 15px;
     display: flex;
@@ -120,16 +101,11 @@
 
     h1 {
         display: block;
-        font-size: 8rem;
-
+        font-size: 4rem;
     }
 
     h3 {
         font-size: 50px;
-    }
-
-    p, h1, h2, li, h4 {
-        text-align: center;
     }
 
     p {
@@ -138,7 +114,9 @@
     }
 
     h4 {
-        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
     }
 
     #github {
@@ -154,9 +132,3 @@
     #bookface {
         padding-top: 70px;
     }
-
-    @media (max-width: 75em) {
-        html{
-            font-size: 60%;
-        }
-    } 

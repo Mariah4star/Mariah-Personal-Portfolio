@@ -48,7 +48,7 @@
         justify-content: left;
         color: rgb(0, 0, 0); 
         padding-top: 100px;
-        padding-right: 50px;
+        padding-left: 30px;
     }
         
     #projects {
@@ -58,9 +58,9 @@
     }
 
     .project-grid {
-        display: grid;
-        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         margin: 0px;
         padding-top: 100px;
       }
@@ -92,6 +92,7 @@
     justify-content: center;
     text-align: justify;
     padding-right: 50px;
+    padding-bottom: 20px;
     }
 
     #footer {
@@ -105,7 +106,7 @@
     }
 
     h3 {
-        font-size: 50px;
+        font-size: 30px;
     }
 
     p {

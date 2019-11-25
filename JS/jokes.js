@@ -17,3 +17,5 @@ const theData = getAPIData('https://official-joke-api.appspot.com/random_ten')
                 })
         }
     })
+
+    let mainArea = document.querySelector('main')

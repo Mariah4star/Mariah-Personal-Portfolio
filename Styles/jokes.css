@@ -1,8 +1,9 @@
 html {
-    background-color: beige;
+    background-color: rgba(245, 245, 220, 0.644);
 }
 
 main {
  display: flex;
  justify-content: center;
+ font-size: 30px; 
 }

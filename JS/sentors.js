@@ -122,7 +122,7 @@ function cardContent(senator) {
     }
     
     img.src = "Images/flag.jpg"
-    //img.alt = 'Placeholder image'
+    img.alt = 'Placeholder image'
 
     let mediaContent = document.createElement('div')
     mediaContent.setAttribute('class', 'media-content')

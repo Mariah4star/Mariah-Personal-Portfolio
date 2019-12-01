@@ -53,7 +53,7 @@
         
     #projects {
         display: flex;
-        background-color: #8BCCC5; 
+        background-color: rgb(153, 139, 204); 
         padding: 50px;
     }
 

@@ -95,6 +95,11 @@ senator_arr.forEach(senator => {
  card.appendChild(cardImage)
  card.appendChild(cardContent(senator))
  container.appendChild(card)
+
+ figureImage.addEventListener("error", event => {
+    let badImage = event.target;
+    badImage.src = "./Images/Doug Jones.jpeg";
+})
 })
 }
 
@@ -122,7 +127,7 @@ function cardContent(senator) {
         img.src = 'Images/lego huh.jpg'
     }
     
-    img.src = "Images/flag.jpg"
+    //img.src = "Images/flag.jpg"
     img.alt = 'Placeholder image'
 
     let mediaContent = document.createElement('div')

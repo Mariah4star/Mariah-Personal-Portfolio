@@ -121,7 +121,7 @@ function cardContent(senator) {
         img.src = 'Images/lego huh.jpg'
     }
     
-    img.src = "Images/flag.jpg"
+    //img.src = "Images/flag.jpg"
     img.alt = 'Placeholder image'
 
     let mediaContent = document.createElement('div')

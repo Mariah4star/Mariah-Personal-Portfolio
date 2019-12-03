@@ -125,8 +125,13 @@ function cardContent(senator) {
     }
     if(senator.party === "ID") {
         img.src = 'Images/lego huh.jpg'
+
+        figureImage.addEventListener("error", event => {
+            let badImage = event.target;
+            badImage.src = "./Images/flag.jpg";
+        })
     }
-    
+
     //img.src = "Images/flag.jpg"
     img.alt = 'Placeholder image'
 

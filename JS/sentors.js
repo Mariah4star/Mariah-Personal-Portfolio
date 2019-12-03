@@ -58,16 +58,17 @@ function totalVotes(senatorList) {
 }
 
 function oldestSenator(senatorList) {
-    const results = senatorList.reduce((oldest, senator) =>{
-        return (oldest.age || 0) > senator.age ? oldest : senator
+    const results = senatorList.reduce((oldest, senator) => {
+      return (oldest.age || 0) > senator.age ? oldest : senator
     }, {})
-}
-
-function sortSenatorByAge(senatorList) {
-    return senatorList.sort((a,b) => {
-        return a.age - b.age
+    return results
+  }
+  
+  function sortSenatorsByAge(senatorList) {
+    return senatorList.sort((a, b) => {
+      return a.age - b.age
     })
-}
+  }
 
 console.log(testReduce)
 

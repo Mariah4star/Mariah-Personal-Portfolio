@@ -52,10 +52,10 @@ const testReduce = testArray.reduce((acc, num) => {
 
 function totalVotes(senatorList) {
     const results = senatorList.reduce((acc, senator) => {
-        return acc + senator.total_votes
-    }, 0)
-    return results
-}
+      return acc + senator.total_votes;
+    }, 0);
+    return results;
+  }
 
 function oldestSenator(senatorList) {
     const results = senatorList.reduce((oldest, senator) => {

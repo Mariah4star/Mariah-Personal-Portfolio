@@ -1,3 +1,8 @@
+body {
+    background-color: beige;
+    margin-bottom: 64px;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
@@ -7,3 +12,4 @@
     margin-bottom: 6rem;
     max-width: 70%;
 }
+

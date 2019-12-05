@@ -167,7 +167,7 @@ planets.forEach((planet) => {
   
 planetPic.addEventListener('error', (event) => {
   let badImage = event.target
-  badImage.src = '../Images/lego huh.jpeg'
+  badImage.src = '../Images/Planets.png'
 })
 
   planetDiv.appendChild(planetPic)

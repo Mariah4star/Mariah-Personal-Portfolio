@@ -75,7 +75,7 @@ body {
   }
 
   button {
-    background-image: url("/Images/images.png");
+    background-color: rgb(2, 2, 88);
     font-size: 30px;
     color: rgb(211, 211, 211);
     margin: 20px;

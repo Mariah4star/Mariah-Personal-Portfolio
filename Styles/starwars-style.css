@@ -77,11 +77,9 @@ header {
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: .5rem;
   max-width: 1280px;
   margin: 0px;
   background-image: url("/assets/star-wars-star-background-4.jpg");
-  padding: 50px;
   z-index: 10; 
   }
 

@@ -58,8 +58,8 @@ header {
 #Characters {
   display: flex;
   justify-content: center;
-  font-size: 60px;
   padding-top: 80px;
+  font-size: 80px;
   background-image: url("/assets/star-wars-star-background-4.jpg");
   margin: 0;
 }
@@ -109,6 +109,8 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 20px;
+    padding-top: 20px;
   }
   
   .picDiv {
@@ -124,4 +126,8 @@ main {
 
   .planetPic {
     width: 160px;
+  }
+
+  h1{
+    font-size: 30px;
   }

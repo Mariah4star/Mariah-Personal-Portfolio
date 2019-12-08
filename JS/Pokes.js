@@ -50,8 +50,9 @@ function populateDOM(single_pokemon) {
     let name = document.createElement('h1')
     let pic = document.createElement('img')
     let picture = document.createElement('img')
-    let height = document.createElement("p");
-    let weight = document.createElement("p");
+    let height = document.createElement("p")
+    let weight = document.createElement("p")
+    
 
     pokeScene.setAttribute('class', 'scene')
     pokeCard.setAttribute('class', 'card')

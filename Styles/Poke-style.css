@@ -22,8 +22,8 @@ body {
 }
 
 .picDiv {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .pictureDiv{
@@ -108,6 +108,11 @@ body {
     font-size: 20px;
     color: #0a0066;
     margin: 0%;
+  }
+
+  p {
+    margin: 0px;
+    font-size: 15px;
   }
 
   #poke {

@@ -50,6 +50,8 @@ function populateDOM(single_pokemon) {
     let name = document.createElement('h1')
     let pic = document.createElement('img')
     let picture = document.createElement('img')
+    let height = document.createElement("p");
+    let weight = document.createElement("p");
 
     pokeScene.setAttribute('class', 'scene')
     pokeCard.setAttribute('class', 'card')
@@ -64,12 +66,18 @@ function populateDOM(single_pokemon) {
 
     let pokeNum = getPokeNumber(single_pokemon.id)
 
+    height.textContent = `Height: ${single_pokemon.height}`
+    weight.textContent = `Weight: ${single_pokemon.weight}`
+
     name.textContent = `#${single_pokemon.id} ${single_pokemon.name[0].toUpperCase()}${(single_pokemon.name.slice(1))}`
+
     pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
     picture.src = "../Images/pokecardBack.png"
 
     pokeFront.appendChild(pic)
     pokeFront.appendChild(name)
+    pokeFront.appendChild(height)
+    pokeFront.appendChild(weight)
 
     pokeBack.appendChild(picture)
 

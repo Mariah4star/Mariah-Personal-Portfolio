@@ -128,9 +128,10 @@ femaleButton.addEventListener('click', () => {
 
   otherCharacters.forEach(character => {
     let matchedDiv = allDivs.find(oneDiv => {
-       return oneDiv.firstChild.textContent === character.name
-     })
-     if(matchedDiv.getAttribute("style") === "display: none;" ) {
+      return oneDiv.firstChild.textContent === character.name
+    })
+    if (matchedDiv.getAttribute("style") === "display: none;") {
+      matchedDiv.setAttribute("style", "display: revert;")
     } else {
       matchedDiv.setAttribute("style", "display: none;")
     }
